@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ShopNova | Cart</title>
+
+    <link rel="stylesheet" href="cart.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        Shop<span>Nova</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="product.html">
+            Products
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="cart.html" class="active">
+            Cart
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="cart-page">
+
+    <div class="cart-heading">
+
+        <p>SHOPNOVA</p>
+
+        <h1>Your Shopping Cart</h1>
+
+    </div>
+
+
+    <div class="cart-layout">
+
+        <div class="cart-products">
+
+            <div id="cartItems"></div>
+
+            <div
+                id="emptyCart"
+                class="empty-cart"
+            >
+
+                <div>🛒</div>
+
+                <h2>Your cart is empty</h2>
+
+                <p>
+                    Add some products to get started.
+                </p>
+
+                <a
+                    href="product.html"
+                    class="btn"
+                >
+                    Browse Products
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <aside class="summary">
+
+            <h2>Order Summary</h2>
+
+            <div class="summary-line">
+                <span>Items</span>
+                <strong id="itemCount">0</strong>
+            </div>
+
+            <div class="summary-line">
+                <span>Subtotal</span>
+                <strong id="subtotal">$0.00</strong>
+            </div>
+
+            <div class="summary-line">
+                <span>Shipping</span>
+                <strong id="shipping">$0.00</strong>
+            </div>
+
+            <div class="summary-line">
+                <span>Tax</span>
+                <strong id="tax">$0.00</strong>
+            </div>
+
+            <hr>
+
+            <div class="total-line">
+                <span>Total</span>
+                <strong id="total">$0.00</strong>
+            </div>
+
+            <button
+                id="checkoutBtn"
+                class="checkout-btn"
+            >
+                Checkout
+            </button>
+
+            <a
+                href="product.html"
+                class="continue"
+            >
+                ← Continue Shopping
+            </a>
+
+        </aside>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<div
+    id="checkoutModal"
+    class="modal"
+>
+
+    <div class="modal-box">
+
+        <button
+            id="closeModal"
+            class="close"
+        >
+            ×
+        </button>
+
+        <p>SHOPNOVA CHECKOUT</p>
+
+        <h2>Complete your order</h2>
+
+        <form id="checkoutForm">
+
+            <label>
+                Full Name
+
+                <input
+                    type="text"
+                    required
+                    placeholder="Your name"
+                >
+            </label>
+
+
+            <label>
+                Email
+
+                <input
+                    type="email"
+                    required
+                    placeholder="you@example.com"
+                >
+            </label>
+
+
+            <label>
+                Address
+
+                <input
+                    type="text"
+                    required
+                    placeholder="Delivery address"
+                >
+            </label>
+
+
+            <button
+                type="submit"
+                class="checkout-btn"
+            >
+                Place Demo Order
+            </button>
+
+            <small>
+                Demo checkout only. No real payment is processed.
+            </small>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<div id="toast" class="toast"></div>
+
+
+<footer>
+
+    <div class="logo">
+        Shop<span>Nova</span>
+    </div>
+
+    <p>
+        DevOps powered shopping experience.
+    </p>
+
+    <div class="copyright">
+        © <span id="year"></span> ShopNova
+    </div>
+
+</footer>
+
+
+<script src="cart.js"></script>
+
+</body>
+</html>
